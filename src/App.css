@@ -252,3 +252,67 @@
   gap: 0.75rem;
   margin-bottom: 1.5rem;
 }
+
+.loom__canvas {
+  display: block;
+  width: 100%;
+  max-width: 640px;
+  margin: 1.5rem auto 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  touch-action: none;
+  cursor: crosshair;
+}
+
+.loom__col {
+  fill: transparent;
+  stroke: rgba(255, 255, 255, 0.06);
+}
+
+.loom__col--active {
+  fill: rgba(100, 108, 255, 0.22);
+}
+
+.loom__stroke {
+  fill: none;
+  stroke: #61dafb;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+
+.loom__note {
+  fill: #ffd166;
+  pointer-events: none;
+  transition: r 120ms;
+}
+
+.loom__hint {
+  fill: rgba(255, 255, 255, 0.4);
+  font-size: 24px;
+  pointer-events: none;
+}
+
+.loom__notes {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  max-width: 640px;
+  margin: 0 auto 1rem;
+  font-size: 0.65rem;
+  opacity: 0.7;
+}
+
+.loom__label--active {
+  color: #ffd166;
+  font-weight: 700;
+}
+
+.loom__tempo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
