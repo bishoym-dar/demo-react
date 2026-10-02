@@ -3,6 +3,7 @@ import './App.css'
 import Home from './pages/Home'
 import Toolbox from './pages/Toolbox'
 import Focus from './pages/Focus'
+import Loom from './pages/Loom'
 
 function App() {
   return (
@@ -13,12 +14,14 @@ function App() {
         </NavLink>
         <NavLink to="/toolbox">Toolbox</NavLink>
         <NavLink to="/focus">Focus</NavLink>
+        <NavLink to="/loom">Loom</NavLink>
       </nav>
 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/toolbox" element={<Toolbox />} />
         <Route path="/focus" element={<Focus />} />
+        <Route path="/loom" element={<Loom />} />
         <Route path="*" element={<Home />} />
       </Routes>
     </HashRouter>
