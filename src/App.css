@@ -69,3 +69,131 @@
 .read-the-docs {
   color: #888;
 }
+
+.site-nav {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.site-nav a {
+  padding: 0.4em 1em;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  color: inherit;
+  transition: border-color 0.25s, background-color 0.25s;
+}
+
+.site-nav a:hover {
+  border-color: #646cff;
+}
+
+.site-nav a.active {
+  background: color-mix(in srgb, #646cff 20%, transparent);
+  border-color: #646cff;
+}
+
+.toolbox__title {
+  margin-bottom: 0.25em;
+  background: linear-gradient(90deg, #646cff, #61dafb);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.toolbox__subtitle {
+  margin: 0 auto 1.5rem;
+  max-width: 36rem;
+  color: #888;
+}
+
+.toolbox__filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.chip {
+  padding: 0.35em 1em;
+  border-radius: 999px;
+}
+
+.chip--active {
+  border-color: #646cff;
+  background: color-mix(in srgb, #646cff 25%, transparent);
+}
+
+.toolbox__grid {
+  list-style: none;
+  margin: 0 0 2rem;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 1.25rem;
+  text-align: left;
+}
+
+.tool-card {
+  padding: 1.25rem 1.5rem;
+  border: 1px solid color-mix(in srgb, currentColor 12%, transparent);
+  border-radius: 12px;
+  background: color-mix(in srgb, currentColor 4%, transparent);
+  transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+}
+
+.tool-card:hover {
+  border-color: #646cff;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px -8px #646cff88;
+}
+
+.tool-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tool-card__emoji {
+  font-size: 2rem;
+}
+
+.tool-card__star {
+  padding: 0.1em 0.45em;
+  font-size: 1.25rem;
+  line-height: 1;
+  color: inherit;
+}
+
+.tool-card__star--on {
+  color: #ffd43b;
+}
+
+.tool-card h2 {
+  margin: 0.5rem 0 0.25rem;
+  font-size: 1.25rem;
+}
+
+.tool-card__tag {
+  display: inline-block;
+  padding: 0.1em 0.6em;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  background: color-mix(in srgb, #61dafb 20%, transparent);
+  color: #61dafb;
+}
+
+.tool-card p {
+  margin: 0.75rem 0;
+  font-size: 0.95rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tool-card,
+  .tool-card:hover {
+    transition: none;
+    transform: none;
+  }
+}
