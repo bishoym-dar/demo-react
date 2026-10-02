@@ -1,38 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { HashRouter, NavLink, Route, Routes } from 'react-router-dom'
 import './App.css'
-import RandomQuote from './components/RandomQuote'
+import Home from './pages/Home'
+import Toolbox from './pages/Toolbox'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React abc</h1>
+    <HashRouter>
+      <nav className="site-nav" aria-label="Main">
+        <NavLink to="/" end>
+          Home
+        </NavLink>
+        <NavLink to="/toolbox">Toolbox</NavLink>
+      </nav>
 
-      <RandomQuote />
-
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/toolbox" element={<Toolbox />} />
+        <Route path="*" element={<Home />} />
+      </Routes>
+    </HashRouter>
   )
 }
 
